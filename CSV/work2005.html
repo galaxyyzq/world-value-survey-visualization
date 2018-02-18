@@ -119,7 +119,7 @@ h4 {
   <!-- <button onClick="output()">test</button>   -->
 
 
-  <h2>Importance in Life: Work 1999-2004</h2>
+  <h2>Importance in Life: Work 2005-2009</h2>
 
 
   <p>We use Country Abbreviations, please refer to http://sustainablesources.com/resources/country-abbreviations/</p>
@@ -177,7 +177,7 @@ d3.select("label")
 var fileArray=["work1995.csv","work2000.csv","work2005.csv","work2010.csv"];
 
 
-d3.csv(fileArray[1], function(error, data) {
+d3.csv(fileArray[2], function(error, data) {
   if (error) throw error;
 
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "State"; }));
