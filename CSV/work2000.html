@@ -75,17 +75,6 @@ h4 {
 </style>
 <html>
 <body>
-
-<h4 >1990-1994:</h4>
-  <a href="http://www.bootcss.com/" class="button">Work Importance</a>
-  <a href="http://www.bootcss.com/" class="button">Family Importance</a>
-  <a href="http://www.bootcss.com/" class="button">Friends Importance</a>
-  <a href="http://www.bootcss.com/" class="button">Leisure time Importance</a>
-  <a href="http://www.bootcss.com/" class="button">Politics Importance</a>
-  <a href="http://www.bootcss.com/" class="button">Religion Importance</a>
-  <a href="http://www.bootcss.com/" class="button">Feeling about Happiness</a>
-  <a href="http://www.bootcss.com/" class="button">State of Health</a>
-
  <h4>1995-1998:</h4>
   <a href="http://www.bootcss.com/" class="button">Work Importance</a>
   <a href="http://www.bootcss.com/" class="button">Family Importance</a>
@@ -137,7 +126,8 @@ h4 {
   
   <label><input type="checkbox"> Sort values</label>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="d3.v3.min.js"></script>
+<script src="d3.js"></script>
 <script>
 
 var margin = {top: 10, right: 20, bottom: 20, left: 60},
@@ -184,10 +174,10 @@ d3.select("label")
 
 
 
-var fileArray=["work1995.csv","work1990.csv","work2000.csv","work2005.csv","work2010.csv"];
+var fileArray=["work1995.csv","work2000.csv","work2005.csv","work2010.csv"];
 
 
-d3.csv(fileArray[2], function(error, data) {
+d3.csv(fileArray[1], function(error, data) {
   if (error) throw error;
 
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "State"; }));
