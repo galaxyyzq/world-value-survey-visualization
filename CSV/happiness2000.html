@@ -178,7 +178,6 @@ var fileArray=["happiness1995.csv","happiness2000.csv","happiness2005.csv","happ
 
 
 d3.csv(fileArray[1], function(error, data) {
-  if (error) throw error;
 
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "State"; }));
 
